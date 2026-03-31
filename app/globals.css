@@ -1183,6 +1183,8 @@ body {
   box-sizing: border-box;
   width: 100%;
   max-width: 320px;
+  /** Évite gras / italique synthétiques sur les polices du bloc (aligné rendu Figma). */
+  font-synthesis: none;
 }
 
 .ds-block-text[data-align="center"] {
@@ -1201,22 +1203,30 @@ body {
   width: 100%;
   padding-bottom: var(--spacing-small-m);
   color: var(--color-content-secondary);
-  font-family: var(--typography-label-small-regular-font-family);
-  font-weight: var(--typography-label-small-regular-font-weight);
   font-style: normal;
+  font-family:
+    var(--typography-label-small-regular-font-family),
+    var(--font-family-apercu-pro),
+    ui-sans-serif,
+    system-ui,
+    sans-serif;
+  font-weight: var(--typography-label-small-regular-font-weight);
   font-size: var(--typography-label-small-regular-font-size);
   line-height: var(--typography-label-small-regular-line-height);
   letter-spacing: var(--typography-label-small-regular-letter-spacing);
 }
 
-.ds-block-text__headline {
+h2.ds-block-text__headline {
   margin: 0;
   width: 100%;
   padding-bottom: var(--spacing-small-m);
   color: var(--color-content-primary);
-  font-family: var(--typography-headline-medium-regular-font-family);
-  font-weight: var(--typography-headline-medium-regular-font-weight);
   font-style: normal;
+  font-family:
+    var(--typography-headline-medium-regular-font-family),
+    ui-serif,
+    serif;
+  font-weight: var(--typography-headline-medium-regular-font-weight);
   font-size: var(--typography-headline-medium-regular-font-size);
   line-height: var(--typography-headline-medium-regular-line-height);
   letter-spacing: var(--typography-headline-medium-regular-letter-spacing);
@@ -1227,9 +1237,14 @@ body {
   width: 100%;
   padding-block: var(--spacing-small-m);
   color: var(--color-content-primary);
-  font-family: var(--typography-body-large-light-font-family);
-  font-weight: var(--typography-body-large-light-font-weight);
   font-style: normal;
+  font-family:
+    var(--typography-body-large-light-font-family),
+    var(--font-family-apercu-pro),
+    ui-sans-serif,
+    system-ui,
+    sans-serif;
+  font-weight: var(--typography-body-large-light-font-weight);
   font-size: var(--typography-body-large-light-font-size);
   line-height: var(--typography-body-large-light-line-height);
   letter-spacing: var(--typography-body-large-light-letter-spacing);
@@ -1239,9 +1254,14 @@ body {
   margin: 0;
   padding-block: var(--spacing-small-m);
   color: var(--color-content-primary);
-  font-family: var(--typography-label-medium-regular-font-family);
-  font-weight: var(--typography-label-medium-regular-font-weight);
   font-style: normal;
+  font-family:
+    var(--typography-label-medium-regular-font-family),
+    var(--font-family-apercu-pro),
+    ui-sans-serif,
+    system-ui,
+    sans-serif;
+  font-weight: var(--typography-label-medium-regular-font-weight);
   font-size: var(--typography-label-medium-regular-font-size);
   line-height: var(--typography-label-medium-regular-line-height);
   letter-spacing: var(--typography-label-medium-regular-letter-spacing);

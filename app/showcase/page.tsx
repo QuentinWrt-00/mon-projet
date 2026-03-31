@@ -1,10 +1,5 @@
 "use client";
 
-import Badge from "@/components/ui/Badge";
-import Header from "@/components/ui/Header";
-import { List, ListItem, ListTitle } from "@/components/ui/List";
-import Button from "@/components/ui/Button";
-import ButtonRounded from "@/components/ui/ButtonRounded";
 import type {
   ComponentProps,
   CSSProperties,
@@ -12,6 +7,13 @@ import type {
   ReactNode,
 } from "react";
 import { cloneElement, useState } from "react";
+import Image from "next/image";
+
+import Badge from "@/components/ui/Badge";
+import Button from "@/components/ui/Button";
+import ButtonRounded from "@/components/ui/ButtonRounded";
+import Header from "@/components/ui/Header";
+import { List, ListItem, ListTitle } from "@/components/ui/List";
 
 type ButtonProps = ComponentProps<typeof Button>;
 type ButtonRoundedProps = ComponentProps<typeof ButtonRounded>;
@@ -373,10 +375,11 @@ export default function ShowcasePage() {
                   label="Label"
                   secondaryLabel="Secondary label"
                   icon={
-                    <img
+                    <Image
                       src="/icons/noIcon.svg"
                       alt=""
-                      decoding="async"
+                      width={24}
+                      height={24}
                       aria-hidden
                     />
                   }
@@ -388,10 +391,11 @@ export default function ShowcasePage() {
               <ListTitle
                 label="Label"
                 icon={
-                  <img
+                  <Image
                     src="/icons/noIcon.svg"
                     alt=""
-                    decoding="async"
+                    width={24}
+                    height={24}
                     aria-hidden
                   />
                 }
